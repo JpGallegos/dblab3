@@ -1,7 +1,7 @@
 <?php 
     session_start();
     $username = "jgallegos";
-    $server = "ada.uprrp.edu";
+    $server = "localhost";
     $password = "jgallegos@";
     $dbName = "ccom4027_b42";
 
