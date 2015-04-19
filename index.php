@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Programa de Clases</title>
-    <style rel="stylesheet" src="./assets/bootstrap-3.3.4/css/bootstrap.min.css"></style>
-    <style rel="stylesheet" src="./assets/bootstrap-3.3.4/css/bootstrap-theme.min.css"></style>
+    <style rel="stylesheet" src="./assets/vendor/bootstrap-3.3.4/css/bootstrap.min.css"></style>
+    <style rel="stylesheet" src="./assets/vendor/bootstrap-3.3.4/css/bootstrap-theme.min.css"></style>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -65,7 +65,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <script type="text/javascript" src="./assets/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
