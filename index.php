@@ -71,7 +71,9 @@
             <button type="submit" class="btn btn-primary btn-sm">Buscar</button>
         </form>
         <div class="jumbotron">
-            <div class="container"></div>
+            <div class="container">
+                <div id="content"></div>
+            </div>
         </div>
 
         <hr/>
@@ -88,8 +90,6 @@
                 var request;
 
                 $('#search').submit(function (e) {
-                    e.preventDefault();
-
                     if (request) {
                         request.abort();
                     }
@@ -98,7 +98,22 @@
 
                     var serializedData = $form.serialize();
 
-                    console.log(serializedData);
+                    request = $.ajax({
+                        url: "program.php",
+                        type: "post",
+                        data: serializedData
+                    });
+
+                    request.done(function (response, textStatus, jqXHR) {
+                        console.log("It worked.");
+                    });
+
+                    request.fail(function (jqXHR, textStatus, errorThrown) {
+                        console.error(
+                            "The following error occured: " + textStatus,
+                            errorThrown
+                        );
+                    });
                 });
             });
         })();
