@@ -53,7 +53,7 @@
             //         <td>$day</td>
             //         <td>$hour</td>
             //     </tr>";                      
-            }
+            // }
         ?>
     </tbody>
 </table> -->
