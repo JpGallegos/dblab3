@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Programa de Clases</title>
-    <link rel="stylesheet" src="http://maxcdn.bootstracdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></link>
+    <style rel="stylesheet" src="/assets/bootstrap-3.3.4/css/bootstrap.min.css"></style>
+    <style rel="stylesheet" src="/assets/bootstrap-3.3.4/css/bootstrap-theme.min.css"></style>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -64,7 +65,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <link rel="script" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></link>
-    <link rel="script" src="http://maxcdn.bootstracdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></link>
+    <script rel="script" src="/assets/jquery/jquery.min.js"></script>
+    <script rel="script" src="/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
