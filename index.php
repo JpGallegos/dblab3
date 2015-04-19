@@ -42,7 +42,7 @@
     </nav>
 
     <div class="container">
-        <form class="form-inline">
+        <form class="form-inline" style="padding-top:5px; padding-bottom:5px;">
             <div class="form-group">
                 <label for="estudiante">Estudiante</label>
                 <select id="estudiante" name="estudiante" class="form-control">
@@ -51,7 +51,7 @@
                         while ($row = mysql_fetch_array($studentResult)) {
                             $name = $row["nombre"];
                             $value = $row["num_stu"];
-                            echo '<option value="$value">$name</option>';
+                            echo "<option value=\"$value\">$name</option>";
                         }                       
                     ?>
                 </select>
