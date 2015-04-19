@@ -28,7 +28,7 @@
 
     $result = mysql_query($sqlSelect) or die("Query to get data failed: " . mysql_error());
 ?>
-<table class="table table-hover">'
+<table class="table table-hover">
     <thead>
         <tr>
             <th>Número Curso</th>
