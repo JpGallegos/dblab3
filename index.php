@@ -42,7 +42,7 @@
     </nav>
 
     <div class="container">
-        <form class="form-inline" style="padding-top:5px; padding-bottom:5px;">
+        <form id="search" class="form-inline" style="padding-top:5px; padding-bottom:5px;">
             <div class="form-group">
                 <label for="estudiante">Estudiante</label>
                 <select id="estudiante" name="estudiante" class="form-control">
@@ -63,7 +63,7 @@
                         $semestreResult = mysql_query($sqlSemesters) or die("Query to get data failed: " . mysql_error());
                         while ($row = mysql_fetch_array($semestreResult)) {
                             $semestre = $row["semestre"];
-                            echo "<option>$semestre</option>";                        
+                            echo "<option value=\"$semestre\">$semestre</option>";                        
                         }                       
                     ?>
                 </select>
@@ -84,7 +84,21 @@
     <script type="text/javascript" src="./assets/vendor/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascritp">
         (function () {
+            $(document).ready(function () {
+                var request;
 
+                $('#search').submit(function (event) {
+                    if (request) {
+                        request.abort();
+                    }
+
+                    var $form = $(this);
+
+                    var serializedData = $form.serialize();
+
+                    console.log(serializedData);
+                });
+            });
         })();
     </script
 </body>
