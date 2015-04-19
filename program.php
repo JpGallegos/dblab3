@@ -32,6 +32,7 @@
     <thead>
         <tr>
             <th>Número Curso</th>
+            <th></th>
             <th>Profesor</th>
             <th>Día</th>
             <th>Hora</th>
