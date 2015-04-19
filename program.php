@@ -5,7 +5,7 @@
     $password = "jgallegos@";
     $dbName = "ccom4027_b42";
 
-    $student = $_GET'estudiante'];
+    $student = $_GET['estudiante'];
     $semester = $_GET['semestre'];
 
     $sqlSelect = "SELECT " +
