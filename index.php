@@ -87,7 +87,9 @@
             $(document).ready(function () {
                 var request;
 
-                $('#search').submit(function (event) {
+                $('#search').submit(function (e) {
+                    e.preventDefault();
+                    
                     if (request) {
                         request.abort();
                     }
