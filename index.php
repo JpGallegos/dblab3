@@ -65,7 +65,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <script rel="script" src="/assets/jquery/jquery.min.js"></script>
-    <script rel="script" src="/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script rel="script" src="./assets/jquery/jquery.min.js"></script>
+    <script rel="script" src="./assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
