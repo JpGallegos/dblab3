@@ -85,38 +85,34 @@
     <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/vendor/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascritp">
-        $(function () {
-            $(document).ready(function () {
-                var request;
+        $(document).ready(function () {
+            var request;
+            $('#search').submit(function (e) {
+                if (request) {
+                    request.abort();
+                }
 
-                $('#search').submit(function (e) {
-                    if (request) {
-                        request.abort();
-                    }
+                var $form = $(this);
+                var serializedData = $form.serialize();
 
-                    var $form = $(this);
+                request = $.ajax({
+                    url: "program.php",
+                    type: "post",
+                    data: serializedData
+                });
 
-                    var serializedData = $form.serialize();
+                request.done(function (response, textStatus, jqXHR) {
+                    console.log("It worked.");
+                });
 
-                    request = $.ajax({
-                        url: "program.php",
-                        type: "post",
-                        data: serializedData
-                    });
-
-                    request.done(function (response, textStatus, jqXHR) {
-                        console.log("It worked.");
-                    });
-
-                    request.fail(function (jqXHR, textStatus, errorThrown) {
-                        console.error(
-                            "The following error occured: " + textStatus,
-                            errorThrown
-                        );
-                    });
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+                    console.error(
+                        "The following error occured: " + textStatus,
+                        errorThrown
+                    );
                 });
             });
-        })();
+        });
     </script
 </body>
 </html>
