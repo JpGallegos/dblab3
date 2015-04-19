@@ -87,6 +87,10 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var request;
+
+            var $jumbotron = $('.jumbotron');
+            $jumbotron.hide();
+
             $('#submit').click(function () {
                 if (request) {
                     request.abort();
@@ -101,6 +105,7 @@
                     },
                     success: function (data) {
                         $('#content').html(data);
+                        $jumbotron.show();
                     }
                 });
             });
