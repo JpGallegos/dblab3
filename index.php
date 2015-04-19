@@ -87,7 +87,7 @@
     <script type="text/javascritp">
         $(document).ready(function () {
             var request;
-            $('#submit').click(function (e) {
+            $('#submit').click(function () {
                 if (request) {
                     request.abort();
                 }
@@ -100,7 +100,7 @@
                     type: "get",
                     data: serializedData,
                     success: function (data) {
-                        $('.content').html(data);
+                        $('#content').html(data);
                     }
                 });
             });
