@@ -92,14 +92,13 @@
                     request.abort();
                 }
 
-                var $form = $(this);
-                var serializedData = $form.serialize();
-
-                debugger;
                 request = $.ajax({
                     url: "program.php",
                     type: "get",
-                    data: serializedData,
+                    data: {
+                        estudiante: $('#estudiante').val(),
+                        semestre: $('#semestre').val()
+                    },
                     success: function (data) {
                         $('#content').html(data);
                     }
