@@ -68,7 +68,7 @@
                     ?>
                 </select>
             </div>
-            <button id="submit" type="button" class="btn btn-primary btn-sm">Buscar</button>
+            <button id="submit" type="button" class="btn btn-primary btn-md">Buscar</button>
         </form>
         <div class="jumbotron">
             <div class="container">
