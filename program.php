@@ -54,7 +54,7 @@
             //         <td>$hour</td>
             //     </tr>";                      
             // }
-            echo $_GET;
+            print_r($_GET);
         ?>
 <!--     </tbody>
 </table> -->
