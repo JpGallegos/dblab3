@@ -19,16 +19,16 @@
                 INNER JOIN profesor AS p 
                 ON o.id_prof = p.id_prof 
                 WHERE 
-                    e.num_est = $student AND 
-                    o.semestre = $semester 
+                    e.num_est = '$student' AND 
+                    o.semestre = '$semester' 
                 ORDER BY o.dias DESC"; 
 
-    // $dbLink = mysql_connect($server, $username, $password) or die("Error connecting to mysql server: " . mysql_error());
-    // mysql_select_db($dbName) or die("Error selecting specified database on mysql server: " . mysql_error());
+    $dbLink = mysql_connect($server, $username, $password) or die("Error connecting to mysql server: " . mysql_error());
+    mysql_select_db($dbName) or die("Error selecting specified database on mysql server: " . mysql_error());
 
-    // $result = mysql_query($sqlSelect) or die("Query to get data failed: " . mysql_error());
+    $result = mysql_query($sqlSelect) or die("Query to get data failed: " . mysql_error());
 ?>
-<!-- <table class="table table-hover">'
+<table class="table table-hover">'
     <thead>
         <tr>
             <th>Número Curso</th>
@@ -39,22 +39,19 @@
     </thead>
     <tbody>
         <?php 
-            // while ($row = mysql_fetch_array($result)) {
-            //     $course = $row["Curso"];
-            //     $prof = $row["Profesor"];
-            //     $day = $row["dias"];
-            //     $hour = $row["Horario"];
-            //     echo "
-            //     <tr>
-            //         <td>$course<td>
-            //         <td>$prof</td>
-            //         <td>$day</td>
-            //         <td>$hour</td>
-            //     </tr>";                      
-            // }
+            while ($row = mysql_fetch_array($result)) {
+                $course = $row["Curso"];
+                $prof = $row["Profesor"];
+                $day = $row["dias"];
+                $hour = $row["Horario"];
+                echo "
+                <tr>
+                    <td>$course<td>
+                    <td>$prof</td>
+                    <td>$day</td>
+                    <td>$hour</td>
+                </tr>";                      
+            }
         ?>
     </tbody>
-</table> -->
-<?php 
-    echo $sqlSelect;
-?>
+</table>
