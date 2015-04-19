@@ -87,7 +87,7 @@
     <script type="text/javascritp">
         $(document).ready(function () {
             var request;
-            $('#search').submit(function (e) {
+            $('#search').on('submit', function (e) {
                 if (request) {
                     request.abort();
                 }
@@ -97,19 +97,11 @@
 
                 request = $.ajax({
                     url: "program.php",
-                    type: "post",
-                    data: serializedData
-                });
-
-                request.done(function (response, textStatus, jqXHR) {
-                    console.log("It worked.");
-                });
-
-                request.fail(function (jqXHR, textStatus, errorThrown) {
-                    console.error(
-                        "The following error occured: " + textStatus,
-                        errorThrown
-                    );
+                    type: "get",
+                    data: serializedData,
+                    success: function (data) {
+                        $('.content').html(data);
+                    }
                 });
             });
         });
