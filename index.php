@@ -50,7 +50,7 @@
                         $studentResult = mysql_query($sqlStudents) or die("Query to get data failed: " . mysql_error());
                         while ($row = mysql_fetch_array($studentResult)) {
                             $name = $row["nombre"];
-                            $value = $row["num_stu"];
+                            $value = $row["num_est"];
                             echo "<option value=\"$value\">$name</option>";
                         }                       
                     ?>
@@ -61,7 +61,7 @@
                 <select id="semestre" name="semestre" class="form-control">
                     <?php 
                         $semestreResult = mysql_query($sqlSemesters) or die("Query to get data failed: " . mysql_error());
-                        while ($row = mysql_fetch_array($semesterResult)) {
+                        while ($row = mysql_fetch_array($semestreResult)) {
                             $semester = $row["semestre"];
                             echo "<option>$semestre</option>";                        
                         }                       
