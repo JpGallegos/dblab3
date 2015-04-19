@@ -84,7 +84,7 @@
 
     <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/vendor/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascritp">
+    <script type="text/javascript">
         $(document).ready(function () {
             var request;
             $('#submit').click(function () {
