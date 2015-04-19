@@ -62,7 +62,7 @@
                     <?php 
                         $semestreResult = mysql_query($sqlSemesters) or die("Query to get data failed: " . mysql_error());
                         while ($row = mysql_fetch_array($semestreResult)) {
-                            $semester = $row["semestre"];
+                            $semestre = $row["semestre"];
                             echo "<option>$semestre</option>";                        
                         }                       
                     ?>
