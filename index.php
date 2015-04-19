@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Programa de Clases</title>
-    <style rel="stylesheet" src="./assets/vendor/bootstrap-3.3.4/css/bootstrap.min.css"></style>
-    <style rel="stylesheet" src="./assets/vendor/bootstrap-3.3.4/css/bootstrap-theme.min.css"></style>
+    <link rel="stylesheet" type="text/css" href="./assets/vendor/bootstrap-3.3.4/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="./assets/vendor/bootstrap-3.3.4/css/bootstrap-theme.min.css"></link>
 </head>
 <body>
     <nav class="navbar navbar-default">
