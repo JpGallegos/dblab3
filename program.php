@@ -8,22 +8,20 @@
     $student = $_GET['estudiante'];
     $semester = $_GET['semestre'];
 
-    $sqlSelect = "SELECT " +
-                    "p.nombre AS `Profesor`, " + 
-                    "CONCAT(o.codigo, '-', o.seccion) AS Curso, " +
-                    "o.dias, " + 
-                    "CONCAT(TIME_FORMAT(o.hora_inicia, '%h:%i%p'), '-', TIME_FORMAT(o.hora_termina, '%h:%i%p')) AS Horario " +
-                "FROM estudiante AS e " + 
-                "INNER JOIN matriculada AS m " + 
-                "ON e.num_est = m.num_est " + 
-                "INNER JOIN ofrece AS o " + 
-                "ON m.id_of = o.id_of " +
-                "INNER JOIN profesor AS p " +
-                "ON o.id_prof = p.id_prof " +
-                "WHERE " +
-                    "e.num_est = " . $student . " AND " +
-                    "o.semestre = " . $semester . " " +
-                "ORDER BY o.dias DESC"; 
+    $sqlSelect = "SELECT 
+                    p.nombre AS `Profesor`, 
+                    CONCAT(o.codigo, '-', o.seccion) AS Curso, 
+                    o.dias, CONCAT(TIME_FORMAT(o.hora_inicia, '%h:%i%p'), '-', TIME_FORMAT(o.hora_termina, '%h:%i%p')) AS Horario 
+                FROM estudiante AS e 
+                INNER JOIN matriculada AS m 
+                ON e.num_est = m.num_est INNER JOIN ofrece AS o 
+                ON m.id_of = o.id_of  
+                INNER JOIN profesor AS p 
+                ON o.id_prof = p.id_prof 
+                WHERE 
+                    e.num_est = $student AND 
+                    o.semestre = $semester 
+                ORDER BY o.dias DESC"; 
 
     // $dbLink = mysql_connect($server, $username, $password) or die("Error connecting to mysql server: " . mysql_error());
     // mysql_select_db($dbName) or die("Error selecting specified database on mysql server: " . mysql_error());
