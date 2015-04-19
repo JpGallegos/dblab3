@@ -68,7 +68,7 @@
                     ?>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm">Buscar</button>
+            <button id="submit" type="button" class="btn btn-primary btn-sm">Buscar</button>
         </form>
         <div class="jumbotron">
             <div class="container">
@@ -87,7 +87,7 @@
     <script type="text/javascritp">
         $(document).ready(function () {
             var request;
-            $('#search').on('submit', function (e) {
+            $('#submit').click(function (e) {
                 if (request) {
                     request.abort();
                 }
