@@ -6,10 +6,10 @@
     $dbName = "ccom4027_b42";
 
     $sqlStudents = "SELECT num_est, nombre FROM estudiante;";
-    $sqlSemesters = "SELECT DISTINCT semestre FROM ofrece;"
+    $sqlSemesters = "SELECT DISTINCT semestre FROM ofrece;";
 
     $dbLink = mysql_connect($server, $username, $password) or die("Error connecting to mysql server: " . mysql_error());
-    mysql_select_db($dbName, $mysql_select_db) or die("Error selecting specified database on mysql server: " . mysql_error());
+    mysql_select_db($dbName) or die("Error selecting specified database on mysql server: " . mysql_error());
 ?>
 <!DOCTYPE html>
 <html lang="en">
