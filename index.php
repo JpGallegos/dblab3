@@ -83,13 +83,13 @@
     <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/vendor/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascritp">
-        (function () {
+        $(function () {
             $(document).ready(function () {
                 var request;
 
                 $('#search').submit(function (e) {
                     e.preventDefault();
-                    
+
                     if (request) {
                         request.abort();
                     }
